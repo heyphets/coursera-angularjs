@@ -8,8 +8,6 @@
 
   function LunchCheckController($scope){
     $scope.inputLunch='';
-    $scope.hasResult=false;
-    $scope.resultMessage='Please enter data first';
     $scope.checkTooMuch = function () {
       if ($scope.inputLunch.trim().length==0) {
         $scope.resultMessage='Please enter data first';
