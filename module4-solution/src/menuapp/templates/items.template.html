@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <tr>
+      <th>Short Name</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr ng-repeat="item in $ctrl.items.menu_items">
+        <td>{{item.short_name}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td style="min-width:90px"><div ng-if="item.price_small">
+              {{item.price_small}}<span ng-if="item.small_portion_name">({{item.small_portion_name}})</span>
+            </div>
+            <div ng-if="item.price_large">
+            {{item.price_large}} <span ng-if="item.large_portion_name">({{item.large_portion_name}})</span>
+            </div>
+        </td>
+    </tr>
+</table>
